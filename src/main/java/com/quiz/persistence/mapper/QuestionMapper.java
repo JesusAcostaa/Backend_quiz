@@ -10,7 +10,7 @@ import org.springframework.stereotype.Component;
 
 import java.util.List;
 
-@Component
+
 @Mapper(componentModel = "spring" , uses = {CategoryMapper.class})
 public interface QuestionMapper {
     @Mappings({
@@ -19,7 +19,6 @@ public interface QuestionMapper {
             @Mapping(source = "idCategoria", target = "categoryId" ),
             @Mapping(source = "respuestaCorrecta", target = "correctAnswer" ),
             @Mapping(source = "puntosDados", target = "points" ),
-//            @Mapping(source = "opciones", target = "options" ),
             @Mapping(source = "categoria", target = "category" ),
 
     })

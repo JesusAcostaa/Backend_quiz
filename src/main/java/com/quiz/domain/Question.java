@@ -1,7 +1,5 @@
 package com.quiz.domain;
 
-import java.util.List;
-
 public class Question {
 
     private int questionId;
@@ -9,7 +7,6 @@ public class Question {
     private int categoryId;
     private String correctAnswer;
     private int points;
-    private List<String> options;
     private Category category;
 
     public int getQuestionId() {
@@ -50,14 +47,6 @@ public class Question {
 
     public void setPoints(int points) {
         this.points = points;
-    }
-
-    public List<String> getOptions() {
-        return options;
-    }
-
-    public void setOptions(List<String> options) {
-        this.options = options;
     }
 
     public Category getCategory() {
