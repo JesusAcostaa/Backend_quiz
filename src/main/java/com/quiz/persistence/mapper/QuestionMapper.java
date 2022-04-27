@@ -6,20 +6,20 @@ import org.mapstruct.InheritInverseConfiguration;
 import org.mapstruct.Mapper;
 import org.mapstruct.Mapping;
 import org.mapstruct.Mappings;
+import org.springframework.stereotype.Component;
 
 import java.util.List;
 
-@Mapper(componentModel = "spring", uses = {CategoryMapper.class})
+@Component
+@Mapper(componentModel = "spring" , uses = {CategoryMapper.class})
 public interface QuestionMapper {
-
-
     @Mappings({
             @Mapping(source = "idPregunta", target = "questionId" ),
             @Mapping(source = "descripcion", target = "description" ),
             @Mapping(source = "idCategoria", target = "categoryId" ),
             @Mapping(source = "respuestaCorrecta", target = "correctAnswer" ),
             @Mapping(source = "puntosDados", target = "points" ),
-            @Mapping(source = "opciones", target = "options" ),
+//            @Mapping(source = "opciones", target = "options" ),
             @Mapping(source = "categoria", target = "category" ),
 
     })

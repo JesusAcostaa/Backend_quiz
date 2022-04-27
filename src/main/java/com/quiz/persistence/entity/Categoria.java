@@ -21,6 +21,13 @@ public class Categoria {
     @OneToMany(mappedBy = "categoria")
     private List<Pregunta> preguntas;
 
+    public List<Pregunta> getPreguntas() {
+        return preguntas;
+    }
+
+    public void setPreguntas(List<Pregunta> preguntas) {
+        this.preguntas = preguntas;
+    }
 
     public Integer getIdCategoria() {
         return idCategoria;

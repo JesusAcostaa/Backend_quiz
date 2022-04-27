@@ -9,7 +9,7 @@ public class Pregunta {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    @Column(name = "id_producto")
+    @Column(name = "id_pregunta")
     private Integer idPregunta;
 
     @Column(name = "descripcion")
@@ -23,10 +23,9 @@ public class Pregunta {
 
     @Column(name = "puntos_dados")
     private Integer puntosDados;
-
-    @Column(name = "opciones")
-    @ElementCollection
-    private List<String> opciones;
+//
+//    @Column(name = "opciones")
+//    private List<String> opciones;
 
     @ManyToOne
     @JoinColumn(name = "id_categoria", insertable = false, updatable = false)
@@ -72,13 +71,13 @@ public class Pregunta {
         this.puntosDados = puntosDados;
     }
 
-    public List<String> getOpciones() {
-        return opciones;
-    }
-
-    public void setOpciones(List<String> opciones) {
-        this.opciones = opciones;
-    }
+//    public List<String> getOpciones() {
+//        return opciones;
+//    }
+//
+//    public void setOpciones(List<String> opciones) {
+//        this.opciones = opciones;
+//    }
 
     public Categoria getCategoria() {
         return categoria;
