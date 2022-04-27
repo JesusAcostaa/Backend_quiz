@@ -1,6 +1,7 @@
 package com.quiz.persistence.entity;
 
 import javax.persistence.*;
+import java.util.List;
 
 @Entity
 @Table(name = "preguntas")
@@ -24,7 +25,12 @@ public class Pregunta {
     private Integer puntosDados;
 
     @Column(name = "opciones")
-    private String opciones;
+    @ElementCollection
+    private List<String> opciones;
+
+    @ManyToOne
+    @JoinColumn(name = "id_categoria", insertable = false, updatable = false)
+    private Categoria categoria;
 
     public Integer getIdPregunta() {
         return idPregunta;
@@ -66,11 +72,19 @@ public class Pregunta {
         this.puntosDados = puntosDados;
     }
 
-    public String getOpciones() {
+    public List<String> getOpciones() {
         return opciones;
     }
 
-    public void setOpciones(String opciones) {
+    public void setOpciones(List<String> opciones) {
         this.opciones = opciones;
+    }
+
+    public Categoria getCategoria() {
+        return categoria;
+    }
+
+    public void setCategoria(Categoria categoria) {
+        this.categoria = categoria;
     }
 }
