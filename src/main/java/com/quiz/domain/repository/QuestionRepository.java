@@ -6,6 +6,7 @@ import java.util.List;
 import java.util.Optional;
 
 public interface QuestionRepository {
+
     List<Question> getAll();
     Optional<List<Question>> getByCategory (int categoryId);
     Optional<Question> getQuestion(int questionId);

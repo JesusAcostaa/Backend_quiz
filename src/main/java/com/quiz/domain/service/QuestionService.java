@@ -16,6 +16,7 @@ public class QuestionService {
     public List<Question> getAll() {
         return  questionRepository.getAll();
     }
+
     public Optional<Question> getQuestion(int questionId){
         return questionRepository.getQuestion(questionId);
     }

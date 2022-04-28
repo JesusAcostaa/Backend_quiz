@@ -17,6 +17,9 @@ public class Opcion {
     @Column(name = "contenido_opcion")
     private String contenidoOpcion;
 
+
+    private boolean esCorrecta;
+
     public Integer getIdOpcion() {
         return idOpcion;
     }
